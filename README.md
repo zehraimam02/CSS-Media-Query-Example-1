@@ -1,4 +1,4 @@
-**Payment Form**<br/><br/>
+**CSS Media Query Example 1**<br/><br/>
 This project serves as a practical exploration of CSS media queries to create responsive web designs. It includes HTML and CSS files to demonstrate various media query techniques for adjusting layout and styling based on different screen sizes.<br/>
 
 <br/>**Features**<br/>
