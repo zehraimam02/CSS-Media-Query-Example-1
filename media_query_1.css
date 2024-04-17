@@ -1,0 +1,101 @@
+/* Resetting margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styles */
+body {
+    font: 14px George serif;
+    background: #ccc;
+}
+
+/* Block-level elements */
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block; /* Ensuring block display */
+}
+
+/* Heading styles */
+h2 {
+    font: 24px George;
+    margin: 0 0 10px 0;
+}
+
+/* Subheading styles */
+h3 {
+    margin: 0 0 8px 0;
+}
+
+/* Paragraph styles */
+p {
+    margin: 0 0 20px 0;
+}
+
+/* Container styles */
+#fluid-wrap {
+    width: 70%;
+    margin : 60px auto;
+    padding: 20px;
+    background: #eee;
+    overflow: hidden;
+}
+
+/* Sidebar styles */
+#sidebar {
+    width: 35%;
+    float: left;
+}
+
+/* Sidebar list styles */
+#sidebar ul {
+    list-style: none;   /* Removing default list styles */
+}
+
+/* Sidebar link styles */
+#sidebar ul li a {       /* In the ul tag, in it li tag, and in it a tag is selected*/
+    color: #900;
+    text-decoration: none;
+    padding: 3px 0;
+    display: block;
+}
+
+/* Media query for large screens */
+@media all and (min-width: 1001px) {
+    #sidebar ul li a:after {
+        content: " ("attr(data-email)")";    /* Adding email address after link *//* content is a property */
+        font-size: 11px;
+        font-style: italic;
+        color: gray;
+    }
+}
+
+/* Media query for medium screens */
+@media all and (max-width: 1000px) and (min-width: 700px) {
+    #sidebar ul li a::before {
+        content: "Email: "; /* Adding 'Email:' before link */
+        font-style: italic;
+        color: #666;
+    }
+}
+
+/* Media query for small and extra large screens */
+@media all and (max-width: 699px) and (min-width: 520px), (min-width: 1151px) {   /*comma means 'or' condition */
+    #sidebar ul li a {
+        padding-left: 21px;
+        background: url(email_symbol.png) left center no-repeat;  /* Adding background image */
+    }   
+}
+/* Main content styles */
+#main-content {
+    width: 65%;
+    float: right;
+}
+
